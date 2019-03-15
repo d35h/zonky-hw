@@ -19,7 +19,7 @@ public class LoanSchedulerTest {
 
     @Test
     public void shouldRunTwoTimes() {
-        await().atMost(Duration.FIVE_MINUTES)
+        await().atMost(Duration.TEN_MINUTES)
                 .untilAsserted(() -> verify(loanScheduler, times(2)).lookForLoans());
         verifyNoMoreInteractions(loanScheduler);
     }
